@@ -36,8 +36,9 @@
     document.getElementById("heroSubtitulo").textContent = meta.subtitulo || "Rodaje en Milán";
     document.getElementById("heroTitulo").textContent = meta.tituloProyecto || "Guía de viaje";
 
-    const primerDiaRodaje = data.agenda && data.agenda[0];
-    const ultimoDiaRodaje = data.agenda && data.agenda[data.agenda.length - 1];
+    const diasRodajeList = (data.agenda || []).filter(d => d.fase === "rodaje");
+    const primerDiaRodaje = diasRodajeList[0];
+    const ultimoDiaRodaje = diasRodajeList[diasRodajeList.length - 1];
 
     let fechas = meta.ciudad || "—";
     if (meta.fechaInicio && meta.fechaFin) {
@@ -198,6 +199,27 @@
     });
   }
 
+  // ---------- render: contactos clave ----------
+  function renderContactos(data) {
+    const wrap = document.getElementById("contactosCards");
+    if (!wrap) return;
+    (data.contactosClave || []).forEach(c => {
+      const card = el("div", "card");
+      card.innerHTML = `
+        <div class="card-head">
+          <h3>${c.rol || "—"}</h3>
+          <span class="tag">${c.dia || ""}</span>
+        </div>
+        <div class="card-fields">
+          <div class="field"><div class="label">Nombre</div><div class="value">${c.nombre || "—"}</div></div>
+          <div class="field"><div class="label">Teléfono</div><div class="value">${c.telefono || "—"}</div></div>
+        </div>
+        ${c.notas ? `<div class="card-notes">${c.notas}</div>` : ""}
+      `;
+      wrap.appendChild(card);
+    });
+  }
+
   // ---------- render: barrio (mapa + puntos de interés) ----------
   function renderBarrio(data) {
     const b = data.barrio;
@@ -320,6 +342,7 @@
     renderVuelos(TRIP_DATA);
     renderAgenda(TRIP_DATA);
     renderLocaciones(TRIP_DATA);
+    renderContactos(TRIP_DATA);
     renderClima(TRIP_DATA);
     renderChecklist(TRIP_DATA);
     setupNav();
