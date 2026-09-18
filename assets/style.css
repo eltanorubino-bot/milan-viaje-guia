@@ -211,6 +211,16 @@ main#top > .section:first-of-type { margin-top: 40px; }
 .section-alt {
   background: var(--block-bg-alt);
 }
+
+/* ---------- color de fondo distinto por sección (para ubicarse rápido) ---------- */
+#resumen     { background: #15130f; }
+#alojamiento { background: #1b1509; }
+#barrio      { background: #0c1a12; }
+#vuelos      { background: #0c1524; }
+#agenda      { background: #17101e; }
+#locaciones  { background: #1e0f10; }
+#contactos   { background: #0a1a1c; }
+#clima       { background: #1c1808; }
 @media (max-width: 700px) {
   .section { padding: 32px 22px; }
 }
@@ -634,7 +644,8 @@ main#top > .section:first-of-type { margin-top: 40px; }
 @media print {
   .topbar, .template-banner, .btn-print, .nav-toggle, .clima-widget, .barrio-map { display: none !important; }
   body { background: #fff; color: #000; }
-  .section, .section-alt { background: #fff; box-shadow: none; }
+  .section, .section-alt,
+  #resumen, #alojamiento, #barrio, #vuelos, #agenda, #locaciones, #contactos, #clima { background: #fff; box-shadow: none; }
   .card, .accordion-panel, .stat-card, .team-pill, .local-support, .checklist-group, .poi-card { border: 1px solid #ccc; }
   .accordion-panel { max-height: none !important; display: block !important; }
 }
