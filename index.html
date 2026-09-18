@@ -14,114 +14,120 @@
 <body>
 
   <div class="template-banner" id="templateBanner">
-      ⚠️ Esta guía es una <strong>plantilla</strong>. Los datos se cargan desde <code>assets/data.js</code> — completá ese archivo con la info real antes de compartirla con todo el equipo.
-        </div>
+    ⚠️ Esta guía es una <strong>plantilla</strong>. Los datos se cargan desde <code>assets/data.js</code> — completá ese archivo con la info real antes de compartirla con todo el equipo.
+  </div>
 
-          <header class="topbar">
-              <div class="topbar-inner">
-                    <a href="#top" class="brand">
-                            <span class="brand-logo logo-paradise" role="img" aria-label="Paradise Films & Content"></span>
-                                    <span class="brand-sep">×</span>
-                                            <span class="brand-logo brand-logo--ytech logo-ytech" role="img" aria-label="YTECH"></span>
-                                                  </a>
-                                                        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-                                                                <span></span><span></span><span></span>
-                                                                      </button>
-                                                                            <nav class="nav" id="mainNav">
-                                                                                    <a href="#resumen">Resumen</a>
-                                                                                            <a href="#alojamiento">Alojamiento</a>
-                                                                                                    <a href="#barrio">Barrio</a>
-                                                                                                            <a href="#vuelos">Pasajes</a>
-                                                                                                                    <a href="#agenda">Agenda</a>
-                                                                                                                            <a href="#locaciones">Locaciones</a>
-                                                                                                                                    <a href="#clima">Clima &amp; equipaje</a>
-                                                                                                                                          </nav>
-                                                                                                                                              </div>
-                                                                                                                                                </header>
-                                                                                                                                                
-                                                                                                                                                  <main id="top">
-                                                                                                                                                  
-                                                                                                                                                      <section class="hero">
-                                                                                                                                                            <div class="hero-logos">
-                                                                                                                                                                    <span class="logo-paradise logo-inline" role="img" aria-label="Paradise Films & Content"></span>
-                                                                                                                                                                            <span class="brand-sep">×</span>
-                                                                                                                                                                                    <span class="logo-ytech logo-inline" role="img" aria-label="YTECH"></span>
-                                                                                                                                                                                          </div>
-                                                                                                                                                                                                <p class="hero-eyebrow" id="heroSubtitulo">Rodaje en Milán</p>
-                                                                                                                                                                                                      <h1 id="heroTitulo">Guía de viaje</h1>
-                                                                                                                                                                                                            <p class="hero-fechas" id="heroFechas">—</p>
-                                                                                                                                                                                                                  <div class="hero-stats" id="heroStats"></div>
-                                                                                                                                                                                                                      </section>
-                                                                                                                                                                                                                      
-                                                                                                                                                                                                                          <section id="resumen" class="section">
-                                                                                                                                                                                                                                <h2 class="section-title"><span class="section-num">01</span>Resumen del viaje</h2>
-                                                                                                                                                                                                                                      <div class="grid grid-4" id="resumenGrid"></div>
-                                                                                                                                                                                                                                            <div class="team-block">
-                                                                                                                                                                                                                                                    <div class="team-col">
-                                                                                                                                                                                                                                                              <h4>Quién viaja</h4>
-                                                                                                                                                                                                                                                                        <div class="team-pills" id="equipoPills"></div>
-                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                        <div class="team-col" id="soporteLocalCol">
-                                                                                                                                                                                                                                                                                                  <h4>Soporte local en Milán</h4>
-                                                                                                                                                                                                                                                                                                            <div class="local-support" id="soporteLocalBox"></div>
-                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                <p class="section-note" id="resumenNota"></p>
-                                                                                                                                                                                                                                                                                                                                    </section>
-                                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                        <section id="alojamiento" class="section section-alt">
-                                                                                                                                                                                                                                                                                                                                              <h2 class="section-title"><span class="section-num">02</span>Alojamiento</h2>
-                                                                                                                                                                                                                                                                                                                                                    <div class="cards" id="alojamientoCards"></div>
-                                                                                                                                                                                                                                                                                                                                                        </section>
-                                                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                                                            <section id="barrio" class="section">
-                                                                                                                                                                                                                                                                                                                                                                  <h2 class="section-title"><span class="section-num">03</span>El barrio</h2>
-                                                                                                                                                                                                                                                                                                                                                                        <p class="section-lead">Zona de Corso Garibaldi (Brera / Moscova) — a 500 m del alojamiento.</p>
-                                                                                                                                                                                                                                                                                                                                                                              <div class="barrio-map" id="barrioMap"></div>
-                                                                                                                                                                                                                                                                                                                                                                                    <div class="poi-grid" id="barrioGrid"></div>
-                                                                                                                                                                                                                                                                                                                                                                                          <a class="map-link" id="barrioMapLink" href="#" target="_blank" rel="noopener">Abrir en Google Maps →</a>
-                                                                                                                                                                                                                                                                                                                                                                                              </section>
-                                                                                                                                                                                                                                                                                                                                                                                              
-                                                                                                                                                                                                                                                                                                                                                                                                  <section id="vuelos" class="section section-alt">
-                                                                                                                                                                                                                                                                                                                                                                                                        <h2 class="section-title"><span class="section-num">04</span>Pasajes</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                              <div class="cards" id="vuelosCards"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                  </section>
-                                                                                                                                                                                                                                                                                                                                                                                                                  
-                                                                                                                                                                                                                                                                                                                                                                                                                      <section id="agenda" class="section">
-                                                                                                                                                                                                                                                                                                                                                                                                                            <h2 class="section-title"><span class="section-num">05</span>Agenda del viaje</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="accordion" id="agendaAccordion"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                      </section>
-                                                                                                                                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                                                                                                                                                                                                          <section id="locaciones" class="section section-alt">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                <h2 class="section-title"><span class="section-num">06</span>Locaciones de rodaje &amp; call sheets</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class="cards" id="locacionesCards"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          </section>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              <section id="clima" class="section">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <h2 class="section-title"><span class="section-num">07</span>Clima &amp; qué llevar</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="clima-widget">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <iframe src="https://www.3bmeteo.com/moduli_esterni/localita_7_giorni_esteso/4074/ffffff/000000/bbbbbb/000000/it/0/1" width="382" height="287" frameborder="0" title="Pronóstico del tiempo en Milán — 3BMeteo"></iframe>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <p class="clima-caption">Pronóstico en vivo de <a href="https://www.3bmeteo.com/meteo/4074" target="_blank" rel="noopener">3BMeteo</a> — se actualiza solo cada vez que se abre la página.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="clima-box" id="climaBox"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="checklist" id="checklistBox"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="btn-print" onclick="window.print()">🖨️ Imprimir / guardar como PDF</button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </section>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </main>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <footer class="footer">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="footer-logos">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <span class="logo-paradise logo-inline" role="img" aria-label="Paradise Films & Content"></span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span class="brand-sep">×</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span class="logo-ytech logo-inline" role="img" aria-label="YTECH"></span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <p>Última actualización: <span id="footerFecha">—</span> · Mantenido por <span id="footerResponsable">—</span></p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <p class="footer-small">Generado para uso interno del equipo de Paradise Films &amp; Content.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </footer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <script src="assets/data.js"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <script src="assets/script.js"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand">
+        <span class="brand-logo logo-paradise" role="img" aria-label="Paradise Films & Content"></span>
+        <span class="brand-sep">×</span>
+        <span class="brand-logo brand-logo--ytech logo-ytech" role="img" aria-label="YTECH"></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#resumen">Resumen</a>
+        <a href="#alojamiento">Alojamiento</a>
+        <a href="#barrio">Barrio</a>
+        <a href="#vuelos">Pasajes</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#locaciones">Locaciones</a>
+        <a href="#clima">Clima &amp; equipaje</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-logos">
+        <span class="logo-paradise logo-inline" role="img" aria-label="Paradise Films & Content"></span>
+        <span class="brand-sep">×</span>
+        <span class="logo-ytech logo-inline" role="img" aria-label="YTECH"></span>
+      </div>
+      <p class="hero-eyebrow" id="heroSubtitulo">Rodaje en Milán</p>
+      <h1 id="heroTitulo">Guía de viaje</h1>
+      <p class="hero-fechas" id="heroFechas">—</p>
+      <div class="hero-stats" id="heroStats"></div>
+    </section>
+
+    <section id="resumen" class="section">
+      <h2 class="section-title"><span class="section-num">01</span>Resumen del viaje</h2>
+      <div class="grid grid-4" id="resumenGrid"></div>
+      <div class="team-block">
+        <div class="team-col">
+          <h4>Quién viaja</h4>
+          <div class="team-pills" id="equipoPills"></div>
+        </div>
+        <div class="team-col" id="soporteLocalCol">
+          <h4>Soporte local en Milán</h4>
+          <div class="local-support" id="soporteLocalBox"></div>
+        </div>
+      </div>
+      <p class="section-note" id="resumenNota"></p>
+    </section>
+
+    <section id="alojamiento" class="section section-alt">
+      <h2 class="section-title"><span class="section-num">02</span>Alojamiento</h2>
+      <div class="aloj-group">
+        <h4 class="aloj-subtitle">Fer Rubino</h4>
+        <div class="cards" id="alojamientoCardsFer"></div>
+      </div>
+      <div class="aloj-group">
+        <h4 class="aloj-subtitle">Agustín &amp; Lucía</h4>
+        <div class="cards" id="alojamientoCardsGusLucia"></div>
+      </div>
+    </section>
+
+    <section id="barrio" class="section">
+      <h2 class="section-title"><span class="section-num">03</span>El barrio</h2>
+      <p class="section-lead">Zona de Corso Garibaldi (Brera / Moscova) — a pasos de ambos alojamientos (Airbnb 55 y 51), marcados en el mapa.</p>
+      <div class="barrio-map" id="barrioMap"></div>
+      <div class="poi-grid" id="barrioGrid"></div>
+      <a class="map-link" id="barrioMapLink" href="#" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+    </section>
+
+    <section id="vuelos" class="section section-alt">
+      <h2 class="section-title"><span class="section-num">04</span>Pasajes</h2>
+      <div class="cards" id="vuelosCards"></div>
+    </section>
+
+    <section id="agenda" class="section">
+      <h2 class="section-title"><span class="section-num">05</span>Agenda del viaje</h2>
+      <div class="accordion" id="agendaAccordion"></div>
+    </section>
+
+    <section id="locaciones" class="section section-alt">
+      <h2 class="section-title"><span class="section-num">06</span>Locaciones de rodaje &amp; call sheets</h2>
+      <div class="cards" id="locacionesCards"></div>
+    </section>
+
+    <section id="clima" class="section">
+      <h2 class="section-title"><span class="section-num">07</span>Clima &amp; qué llevar</h2>
+      <div class="clima-widget">
+        <iframe src="https://www.3bmeteo.com/moduli_esterni/localita_7_giorni_esteso/4074/ffffff/000000/bbbbbb/000000/it/0/1" width="382" height="287" frameborder="0" title="Pronóstico del tiempo en Milán — 3BMeteo"></iframe>
+      </div>
+      <p class="clima-caption">Pronóstico en vivo de <a href="https://www.3bmeteo.com/meteo/4074" target="_blank" rel="noopener">3BMeteo</a> — se actualiza solo cada vez que se abre la página.</p>
+      <div class="clima-box" id="climaBox"></div>
+      <div class="checklist" id="checklistBox"></div>
+      <button class="btn-print" onclick="window.print()">🖨️ Imprimir / guardar como PDF</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logos">
+      <span class="logo-paradise logo-inline" role="img" aria-label="Paradise Films & Content"></span>
+      <span class="brand-sep">×</span>
+      <span class="logo-ytech logo-inline" role="img" aria-label="YTECH"></span>
+    </div>
+    <p>Última actualización: <span id="footerFecha">—</span> · Mantenido por <span id="footerResponsable">—</span></p>
+    <p class="footer-small">Generado para uso interno del equipo de Paradise Films &amp; Content.</p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
