@@ -47,7 +47,7 @@ const TRIP_DATA = {
   soporteLocal: {
     nombre: "Pietro Fierri",
     rol: "Soporte local de producción",
-    telefono: "[+39 ...]",
+    telefono: "+39 348 733 9658",
     notas: "Contacto en Milán para locaciones, permisos y logística en terreno."
   },
 
@@ -453,6 +453,34 @@ const TRIP_DATA = {
       }
     ]
   },
+
+  // ------------------------------------------------------------------
+  // 5c. CONTACTOS CLAVE — sonidista, maquilladora y contacto de locación
+  // del sábado 17/10. Fer va a pasar los teléfonos reales más adelante.
+  // ------------------------------------------------------------------
+  contactosClave: [
+    {
+      rol: "Sonidista",
+      nombre: "[Pendiente]",
+      telefono: "[Pendiente]",
+      dia: "Sábado 17 de octubre",
+      notas: ""
+    },
+    {
+      rol: "Maquilladora",
+      nombre: "[Pendiente]",
+      telefono: "[Pendiente]",
+      dia: "Sábado 17 de octubre",
+      notas: ""
+    },
+    {
+      rol: "Contacto de la locación",
+      nombre: "[Pendiente]",
+      telefono: "[Pendiente]",
+      dia: "Sábado 17 de octubre",
+      notas: "Locación del día 2 de la agenda (Rodaje — Entrevistas)."
+    }
+  ],
 
   // ------------------------------------------------------------------
   // 6. CLIMA
