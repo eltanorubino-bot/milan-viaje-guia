@@ -51,9 +51,9 @@
 
     const diasRodaje = (data.agenda || []).filter(d => d.fase === "rodaje").length;
     const stats = [
-      { label: "Días de rodaje", value: diasRodaje + " días" },
-      { label: "Ciudad", value: meta.ciudad || "—" },
-      { label: "Equipo", value: (meta.equipoCantidad || data.vuelos.length || "—") + " personas" }
+      { label: "🎬 Días de rodaje", value: diasRodaje + " días" },
+      { label: "🏙️ Ciudad", value: meta.ciudad || "—" },
+      { label: "👥 Equipo", value: (meta.equipoCantidad || data.vuelos.length || "—") + " personas" }
     ];
     const wrap = document.getElementById("heroStats");
     stats.forEach(s => {
@@ -69,10 +69,10 @@
     const meta = data.meta || {};
     const grid = document.getElementById("resumenGrid");
     const items = [
-      { label: "Proyecto / cliente", value: meta.tituloProyecto || "—" },
-      { label: "Fechas", value: (meta.fechaInicio && meta.fechaFin) ? `${formatFechaCorta(meta.fechaInicio)} – ${formatFechaCorta(meta.fechaFin)}` : "—" },
-      { label: "Alojamiento", value: (data.alojamientos.length || "—") + " confirmados" },
-      { label: "Locaciones", value: (data.locaciones.length || "—") + " confirmadas" }
+      { label: "🎯 Proyecto / cliente", value: meta.tituloProyecto || "—" },
+      { label: "📅 Fechas", value: (meta.fechaInicio && meta.fechaFin) ? `${formatFechaCorta(meta.fechaInicio)} – ${formatFechaCorta(meta.fechaFin)}` : "—" },
+      { label: "🏠 Alojamiento", value: (data.alojamientos.length || "—") + " confirmados" },
+      { label: "📍 Locaciones", value: (data.locaciones.length || "—") + " confirmadas" }
     ];
     items.forEach(i => {
       grid.appendChild(el("div", "stat-card", `<div class="label">${i.label}</div><div class="value">${i.value}</div>`));
@@ -91,8 +91,8 @@
     if (!s || !s.nombre) { col.style.display = "none"; return; }
     const box = document.getElementById("soporteLocalBox");
     box.innerHTML = `
-      <strong>${s.nombre}</strong><span>${s.rol || ""}</span>
-      ${s.telefono ? `<span class="local-support-phone">${s.telefono}</span>` : ""}
+      <strong>👤 ${s.nombre}</strong><span>${s.rol || ""}</span>
+      ${s.telefono ? `<span class="local-support-phone">📞 ${s.telefono}</span>` : ""}
       ${s.notas ? `<span class="local-support-notes">${s.notas}</span>` : ""}
     `;
   }
@@ -109,13 +109,13 @@
           <span class="tag">${formatFechaCorta(h.checkIn)} → ${formatFechaCorta(h.checkOut)}</span>
         </div>
         <div class="card-fields">
-          <div class="field"><div class="label">Dirección</div><div class="value">${h.direccion || "—"}</div></div>
-          <div class="field"><div class="label">Check-in</div><div class="value">${formatFecha(h.checkIn)} · ${h.horaCheckIn || "—"}</div></div>
-          <div class="field"><div class="label">Check-out</div><div class="value">${formatFecha(h.checkOut)} · ${h.horaCheckOut || "—"}</div></div>
-          <div class="field"><div class="label">N° de reserva</div><div class="value">${h.numeroReserva || "—"}</div></div>
-          <div class="field"><div class="label">Teléfono</div><div class="value">${h.telefono || "—"}</div></div>
+          <div class="field"><div class="label">📍 Dirección</div><div class="value">${h.direccion || "—"}</div></div>
+          <div class="field"><div class="label">🛎️ Check-in</div><div class="value">${formatFecha(h.checkIn)} · ${h.horaCheckIn || "—"}</div></div>
+          <div class="field"><div class="label">🚪 Check-out</div><div class="value">${formatFecha(h.checkOut)} · ${h.horaCheckOut || "—"}</div></div>
+          <div class="field"><div class="label">🔖 N° de reserva</div><div class="value">${h.numeroReserva || "—"}</div></div>
+          <div class="field"><div class="label">📞 Teléfono</div><div class="value">${h.telefono || "—"}</div></div>
         </div>
-        ${h.huespedes && h.huespedes.length ? `<div class="card-guests"><strong>Huéspedes:</strong> ${h.huespedes.join(", ")}</div>` : ""}
+        ${h.huespedes && h.huespedes.length ? `<div class="card-guests"><strong>👤 Huéspedes:</strong> ${h.huespedes.join(", ")}</div>` : ""}
         ${h.notas ? `<div class="card-notes">${h.notas}</div>` : ""}
         ${h.mapaUrl ? `<a class="map-link" href="${h.mapaUrl}" target="_blank" rel="noopener">Ver en el mapa →</a>` : ""}
       `;
@@ -131,10 +131,10 @@
       const card = el("div", "card");
       const tramosHtml = (v.tramos || []).map(t => `
         <div class="tramo">
-          <span class="tramo-tipo">${t.tipo || ""}</span>
+          <span class="tramo-tipo">${(t.tipo || "").startsWith("Vuelta") ? "🛬" : "✈️"} ${t.tipo || ""}</span>
           <div>
             <div class="tramo-route">${t.origen || "—"} → ${t.destino || "—"}</div>
-            <div class="tramo-meta">${t.aerolinea || ""} ${t.numeroVuelo || ""} · ${formatFechaCorta(t.fecha)} · ${t.horaSalida || "--:--"} → ${t.horaLlegada || "--:--"}${t.llegaOtroDia ? " (+1 día)" : ""} · ${t.escalas || ""}${t.asiento ? " · Asiento " + t.asiento : ""}${t.codigoReserva ? " · PNR " + t.codigoReserva : ""}</div>
+            <div class="tramo-meta">${t.aerolinea || ""} ${t.numeroVuelo || ""} · ${formatFechaCorta(t.fecha)} · ${t.horaSalida || "--:--"} → ${t.horaLlegada || "--:--"}${t.llegaOtroDia ? " (+1 día)" : ""} · ${t.escalas || ""}${t.asiento ? " · 💺 " + t.asiento : ""}</div>
           </div>
         </div>
       `).join("");
@@ -158,17 +158,19 @@
         </div>
       `).join("");
       const faseTag = d.fase === "prep"
-        ? `<span class="fase-tag fase-prep">Prep</span>`
-        : `<span class="fase-tag fase-rodaje">Rodaje</span>`;
+        ? `<span class="fase-tag fase-prep">🔧 Prep</span>`
+        : d.fase === "salida"
+          ? `<span class="fase-tag fase-salida">🛫 Salida</span>`
+          : `<span class="fase-tag fase-rodaje">🎬 Rodaje</span>`;
       item.innerHTML = `
         <button class="accordion-trigger" type="button">
           <span>
-            <span class="accordion-day">Día ${d.dia} · ${formatFecha(d.fecha)} ${faseTag}</span>
+            <span class="accordion-day">🗓️ Día ${d.dia} · ${formatFecha(d.fecha)} ${faseTag}</span>
             <span class="accordion-title">${d.titulo || ""}</span>
           </span>
           <span class="accordion-icon">+</span>
         </button>
-        <div class="accordion-panel"><div class="accordion-panel-inner">${rows}</div></div>
+        <div class="accordion-panel"><div class="accordion-panel-inner">${rows}${d.notas ? `<div class="accordion-notes">${d.notas}</div>` : ""}</div></div>
       `;
       item.querySelector(".accordion-trigger").addEventListener("click", () => {
         item.classList.toggle("open");
@@ -185,12 +187,12 @@
       card.innerHTML = `
         <div class="card-head">
           <h3>${l.nombre || "—"}</h3>
-          <span class="tag">Día ${l.dia} · Llamado ${l.horaLlamado || "--:--"}</span>
+          <span class="tag">Día ${l.dia} · ⏰ Llamado ${l.horaLlamado || "--:--"}</span>
         </div>
         <div class="card-fields">
-          <div class="field"><div class="label">Dirección</div><div class="value">${l.direccion || "—"}</div></div>
-          <div class="field"><div class="label">Contacto</div><div class="value">${l.contacto || "—"}</div></div>
-          <div class="field"><div class="label">Teléfono</div><div class="value">${l.telefonoContacto || "—"}</div></div>
+          <div class="field"><div class="label">📍 Dirección</div><div class="value">${l.direccion || "—"}</div></div>
+          <div class="field"><div class="label">☎️ Contacto</div><div class="value">${l.contacto || "—"}</div></div>
+          <div class="field"><div class="label">📞 Teléfono</div><div class="value">${l.telefonoContacto || "—"}</div></div>
         </div>
         ${l.notas ? `<div class="card-notes">${l.notas}</div>` : ""}
         ${l.mapaUrl ? `<a class="map-link" href="${l.mapaUrl}" target="_blank" rel="noopener">Ver en el mapa →</a>` : ""}
@@ -211,8 +213,8 @@
           <span class="tag">${c.dia || ""}</span>
         </div>
         <div class="card-fields">
-          <div class="field"><div class="label">Nombre</div><div class="value">${c.nombre || "—"}</div></div>
-          <div class="field"><div class="label">Teléfono</div><div class="value">${c.telefono || "—"}</div></div>
+          <div class="field"><div class="label">👤 Nombre</div><div class="value">${c.nombre || "—"}</div></div>
+          <div class="field"><div class="label">📞 Teléfono</div><div class="value">${c.telefono || "—"}</div></div>
         </div>
         ${c.notas ? `<div class="card-notes">${c.notas}</div>` : ""}
       `;
@@ -254,7 +256,7 @@
     const c = data.clima || {};
     const box = document.getElementById("climaBox");
     if (c.epoca) {
-      box.appendChild(el("div", "field", `<div class="label">Época</div><div class="value">${c.epoca}</div>`));
+      box.appendChild(el("div", "field", `<div class="label">📅 Época</div><div class="value">${c.epoca}</div>`));
     }
     if (c.recomendacion) {
       box.appendChild(el("div", "card-notes", c.recomendacion));
