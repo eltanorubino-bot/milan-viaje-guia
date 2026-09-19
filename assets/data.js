@@ -383,8 +383,8 @@ const TRIP_DATA = {
       nombre: "🎥 Villa privada — rodaje YY + British Butler Institute",
       direccion: "[A confirmar]",
       horaLlamado: "[Pendiente — horario TBD]",
-      contacto: "Pietro Fierri",
-      telefonoContacto: "[+39 ...]",
+      contacto: "[Pendiente]",
+      telefonoContacto: "[Pendiente]",
       mapaUrl: "",
       notas: "Brokers no participan este día."
     },
@@ -393,8 +393,8 @@ const TRIP_DATA = {
       nombre: "🏨 Bulgari Hotel Milano — recepción de bienvenida",
       direccion: "Bulgari Hotel Milano, Milán",
       horaLlamado: "[Pendiente]",
-      contacto: "Pietro Fierri",
-      telefonoContacto: "[+39 ...]",
+      contacto: "[Pendiente]",
+      telefonoContacto: "[Pendiente]",
       mapaUrl: "",
       notas: "Anfitrión: Andrew Kraynak. Venue exacto dentro del hotel a confirmar."
     },
@@ -403,8 +403,8 @@ const TRIP_DATA = {
       nombre: "🏛️ ACPV + 🏭 B&B Italia Factory",
       direccion: "[A confirmar — ACPV Milán / B&B Italia Factory]",
       horaLlamado: "09:00 (sesión Ytech en el Bulgari Hotel)",
-      contacto: "Pietro Fierri",
-      telefonoContacto: "[+39 ...]",
+      contacto: "[Pendiente]",
+      telefonoContacto: "[Pendiente]",
       mapaUrl: "",
       notas: "Incluye sesión Ytech en el Bulgari Hotel, visita a ACPV y a la fábrica de B&B Italia."
     },
@@ -413,8 +413,8 @@ const TRIP_DATA = {
       nombre: "🏭 Arclinea Factory + ⛏️ Cantera de travertino + 🕯️ Villa Necchi",
       direccion: "Caldogno (Arclinea) / Val Liona (cantera) / Villa Necchi Campiglio, Milán",
       horaLlamado: "08:00 (salida del Bulgari Hotel)",
-      contacto: "Pietro Fierri",
-      telefonoContacto: "[+39 ...]",
+      contacto: "[Pendiente]",
+      telefonoContacto: "[Pendiente]",
       mapaUrl: "",
       notas: "Día de traslados largos: Caldogno, Val Liona y cena de cierre en Villa Necchi (a confirmar)."
     }
